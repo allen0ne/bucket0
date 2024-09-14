@@ -7,3 +7,7 @@
 ## 功能
 - **屏蔽广告**：移除或隐藏网页及应用中的广告。
 - **提升体验**：减少广告干扰，提高内容阅读或应用使用的流畅度
+
+## 链接
+### <font face='Cuttlefish.conf'>
+[Cuttlefish.conf](https://raw.githubusercontent.com/allen0ne/bucket0/main/QuantumultX-zy.conf?token=GHSAT0AAAAAACXCDRM3UP4N2UG7J54YL54UZXFD3KA)
