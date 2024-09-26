@@ -1,0 +1,39 @@
+# Profile Enhancement Merge Template for Clash Verge
+
+profile:
+  store-selected: true
+
+dns:
+  enable: true
+  listen: '0.0.0.0:1053'  # DNS 服务器监听的本地地址和端口
+  ipv6: false             # 不启用 IPv6
+  default-nameserver:     # 默认的 DNS 服务器（国内优先）
+    - 223.5.5.5           # 阿里 DNS
+    - 114.114.114.114     # 114 DNS
+  nameserver:             # 用于匹配国内流量的 DNS 服务器
+    - 223.5.5.5
+    - 114.114.114.114
+  fallback:               # 当国内 DNS 无法解析时，使用这些 DNS 服务器解析国外流量
+    - 8.8.8.8             # Google DNS
+    - 8.8.4.4             # Google 备用 DNS
+    - 1.1.1.1             # Cloudflare DNS
+    - https://dns.google/dns-query   # 支持 DoH（DNS over HTTPS）
+    - https://cloudflare-dns.com/dns-query  # Cloudflare DoH
+
+  enhanced-mode: fake-ip  # 使用 fake-ip 模式提升 DNS 解析速度
+  fake-ip-filter:         # 指定不使用 fake-ip 的域名列表（主要是国内常用服务）
+    - "*.cn"              # 所有 .cn 结尾的域名不使用 fake-ip
+    - "*.baidu.com"
+    - "*.qq.com"
+    - "*.taobao.com"
+    - "*.jd.com"
+    - "*.weibo.com"
+    - "*.sina.com.cn"
+    - "*.163.com"
+
+# 配置规则
+rules:
+  - DOMAIN-SUFFIX,bing.com,🇺🇲 美国节点
+  - GEOIP,CN,DIRECT       # 国内 IP 直连，不走代理，使用国内 DNS
+  - GEOIP,LAN,DIRECT      # 本地局域网流量直连
+  - MATCH,🇭🇰 香港节点
