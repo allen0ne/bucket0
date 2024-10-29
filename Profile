@@ -32,8 +32,17 @@ dns:
     - "*.163.com"
 
 # 配置规则
+rule-providers:
+  adblock:
+    type: http
+    behavior: domain
+    url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+    path: ./adblock.yaml
+    interval: 86400
+
 rules:
   - DOMAIN-SUFFIX,bing.com,🇺🇲 美国节点
+  - DOMAIN-SUFFIX,Google.com,🇺🇲 美国节点
   - GEOIP,CN,DIRECT       # 国内 IP 直连，不走代理，使用国内 DNS
   - GEOIP,LAN,DIRECT      # 本地局域网流量直连
   - MATCH,🇭🇰 香港节点
