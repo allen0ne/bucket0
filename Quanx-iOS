@@ -89,7 +89,6 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 
 [server_remote]
 https://sub.godya.cc/api/v1/client/subscribe?token=52df9ce3fb6b92a06bdcfddbc0f7c83c, tag=好鸭, update-interval=172800, opt-parser=false, enabled=true
-# > 魔法仅供临时使用from@gitbigg
 
 
 
