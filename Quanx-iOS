@@ -88,10 +88,8 @@ https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.re
 
 
 [server_remote]
-# > OuO
-https://oss3.cauenvao.click/api/v1/client/subscribe?token=640e011a65e0c5b2ecf3e7ec362d27f5
+https://sub.godya.cc/api/v1/client/subscribe?token=52df9ce3fb6b92a06bdcfddbc0f7c83c, tag=好鸭, update-interval=172800, opt-parser=false, enabled=true
 # > 魔法仅供临时使用from@gitbigg
-https://raw.githubusercontent.com/gitbigg/jd/main/new#delreg=.*&rename=@tg%40ddgksf2021-+@num-$index7, tag=🐟临时使用, update-interval=3600, opt-parser=true, enabled=true
 
 
 
@@ -120,6 +118,7 @@ static=哔哩哔哩, direct, 香港节点, 台湾节点, img-url=https://raw.git
 static=声田音乐, 美国节点, 自动选择, direct, 台湾节点, 香港节点, 日本节点, 狮城节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
 static=国际媒体, 台湾节点, 自动选择, direct, 香港节点, 日本节点, 美国节点, 狮城节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
 static=兜底分流, 自动选择, 全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+static=Emby, server-tag-regex=(?=.*(Emby|emby)).*$, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 
 #默认设置15分钟测速一次，可自行修改check-interval=后面的数值（单位：秒），tolerance=后面的数值不建议修改
 #将下面的url-latency-benchmark的内容替换成static，并删除[check-interval=900, tolerance=0, ]即可手动选择节点
@@ -145,10 +144,13 @@ https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list, tag
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-
+https://raw.githubusercontent.com/ddgksf2013/Filter/master/Emby.list, tag=Emby分流, force-policy=Emby, update-interval=172800, opt-parser=true, enabled=true
 
 
 [filter_local]
+host, cf.niceduck.lol, Emby
+host, dpxcf.niceduck.lol, Emby
+host, jcf.niceduck.lol, Emby
 
 # > 一些比较容易忽视的分流
 host, ad.12306.cn, direct
